@@ -7,6 +7,8 @@ before_install:
   - cat travis-racket/install-racket.sh | bash # pipe to bash not sh!
 
 script:
+ - cd .. && /usr/racket/bin/raco pkg install rpless/rkt-ci-example
+ - cd rpless/rkt-ci-example
  - /usr/racket/bin/raco setup
  - /usr/racket/bin/raco test
  - /usr/racket/bin/raco coverage -c coveralls
