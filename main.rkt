@@ -3,8 +3,8 @@
 (define (foo a b)
   (+ a b))
 
-(define (bar a b c d)
-  (- a b c d))
+(define (bar a b c)
+  (- a b c))
 
 (module+ test
   (require rackunit)
